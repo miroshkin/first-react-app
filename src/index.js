@@ -12,7 +12,7 @@ const name = 'Anton'
 const header = (
   <header>
     <h1 id = { titleId }>{ name } { title }</h1>
-    <p>{ desc } {1 * 7}</p>
+    <p className='prgrph'>{ desc } {1 * 7}</p>
     {/* <p>{ desc } {1 * 7}</p> */}
   </header>
 );
