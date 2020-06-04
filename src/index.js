@@ -4,23 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const title = React.createElement (
-  'h1',
-  {id: 'main-title', title: 'This is a title'},
-  'My first react element'
-);
+const title = 'My first react element';
+const titleId = 'main-title';
+const desc = 'I just learned new React feature';
 
-const desc = React.createElement(
-  'p',
-  null,
-  'I just learned new React feature'
-);
-
-const header = React.createElement(
-  'header',
-  null,
-  title,
-  desc
+const header = (
+  <header>
+    <h1 id = { titleId }>{ title }</h1>
+    <p>{ desc }</p>
+  </header>
 );
 
 console.log(title);
