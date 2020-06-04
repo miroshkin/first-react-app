@@ -4,14 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const title = 'My first react element';
+const title = '\'s first react element';
 const titleId = 'main-title';
 const desc = 'I just learned new React feature';
+const name = 'Anton'
 
 const header = (
   <header>
-    <h1 id = { titleId }>{ title }</h1>
-    <p>{ desc }</p>
+    <h1 id = { titleId }>{ name } { title }</h1>
+    <p>{ desc } {1 * 7}</p>
+    {/* <p>{ desc } {1 * 7}</p> */}
   </header>
 );
 
