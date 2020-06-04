@@ -4,10 +4,29 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const title = React.createElement (
+  'h1',
+  {id: 'main-title', title: 'This is a title'},
+  'My first react element'
+);
+
+const desc = React.createElement(
+  'p',
+  null,
+  'I just learned new React feature'
+);
+
+const header = React.createElement(
+  'header',
+  null,
+  title,
+  desc
+);
+
+console.log(title);
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  header,
   document.getElementById('root')
 );
 
