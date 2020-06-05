@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-function Header () {
+const Header = () => {
   return (
     <header>
       <h1>Title</h1>
@@ -12,6 +12,7 @@ function Header () {
     </header>
   );
 }
+
 
 
 ReactDOM.render(
