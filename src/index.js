@@ -15,7 +15,7 @@ function Header () {
 
 
 ReactDOM.render(
-  header,
+  <Header />,
   document.getElementById('root')
 );
 
