@@ -16,7 +16,7 @@ const Header = () => {
 const Player = () => {
   return (
     <div className="player">
-      <span className  ="player-name">Anton</span>
+      <span className  ="player-name">Antonio</span>
       <Counter/>
     </div>
   );
