@@ -4,6 +4,25 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const players = [
+  {
+    name: "Guil",
+    score: 50
+  },
+  {
+    name: "Treasure",
+    score: 85
+  },
+  {
+    name: "Ashley",
+    score: 95
+  },
+  {
+    name: "James",
+    score: 80
+  }
+];
+
 const Header = (props) => {
   return (
     <header>
@@ -32,19 +51,22 @@ const Counter = (props) => {
   );
 }
 
-const MyApp = () => {
+const MyApp = (props) => {
   return (
     <div className="scoreboard">
-      <Header title="Scoreboard" totalPlayers={10}/>
+      <Header title="Scoreboard" totalPlayers={props.initialPlayers.length}/>
+      
       {/* Players list */}
-      <Player playerName ="Federico" score={5} />
-      <Player playerName ="Olga" score={4} />
+      {props.initialPlayers.map( player =>
+        <Player playerName = {player.name} score={player.score} />
+      )}
+      
     </div>
   );
 }
 
 ReactDOM.render(
-  <MyApp />,
+  <MyApp initialPlayers = { players }/>,
   document.getElementById('root')
 );
 
