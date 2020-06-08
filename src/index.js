@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
-      <h1>Title</h1>
-      <span className="stats">Players:1</span>
+      <h1>{ props.title }</h1>
+      <span className="stats">Players:{props.totalPlayers}</span>
     </header>
   );
 }
@@ -35,7 +35,7 @@ const Counter = () => {
 const MyApp = () => {
   return (
     <div className="scoreboard">
-      <Header/>
+      <Header title="Scoreboard" totalPlayers={10}/>
       {/* Players list */}
       <Player/>
     </div>
