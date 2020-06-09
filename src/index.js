@@ -50,7 +50,7 @@ class Counter extends React.Component {
     return (
       <div className="counter">
         <button className="counter-action decrement"> - </button>
-        <span className="counter-score">{props.score} </span>
+        <span className="counter-score">{this.props.score} </span>
         <button className="counter-action increment"> + </button>
       </div>
     );
